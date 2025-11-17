@@ -105,8 +105,9 @@ class CustomNavbar extends HTMLElement {
                 <a href="#hero" class="logo">Daniel Dable</a>
                 <div class="nav-links">
                     <a href="#about">About</a>
+                    <a href="#qualifications">Qualifications</a>
                     <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
+<a href="#skills">Skills</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#life">Life</a>
                     <a href="#contact">Contact</a>

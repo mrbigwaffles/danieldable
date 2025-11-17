@@ -34,6 +34,14 @@ section h2::after {
     left: 20%;
     border-radius: 2px;
 }
+/* Qualifications section styling */
+#qualifications ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+#qualifications ul li:last-child {
+    border-bottom: none;
+}
 
 /* Experience card animation */
 .experience-card {
