@@ -1,19 +1,364 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Dable | Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/experience-card.js"></script>
+    <script src="components/portfolio-item.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Daniel Dable</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Crafting digital excellence through innovative solutions and strategic thinking</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#experience" class="px-8 py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-gray-100 transition duration-300">Work Experience</a>
+                <a href="#" class="px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-blue-600 transition duration-300">Download CV</a>
+                <a href="https://www.linkedin.com/in/daniel-dable-482637311/" target="_blank" class="px-8 py-3 bg-blue-700 text-white rounded-full font-medium hover:bg-blue-800 transition duration-300 flex items-center gap-2">
+                    <i data-feather="linkedin"></i> Connect
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="http://static.photos/people/640x360/1" alt="Daniel Dable" class="rounded-xl shadow-xl">
+                </div>
+                <div>
+                    <p class="text-lg mb-4">I'm a passionate professional with a diverse background in technology and business, dedicated to creating impactful solutions.</p>
+                    <p class="text-lg mb-4">With over 8 years of experience across multiple industries, I bring a unique perspective to every challenge, combining technical expertise with strategic vision.</p>
+                    <p class="text-lg">When I'm not working, you can find me exploring new cultures, practicing photography, or hiking in the mountains. I believe life experiences shape professional excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Professional Experience</h2>
+            
+            <experience-card 
+                title="Senior Product Manager" 
+                company="Tech Innovations Inc." 
+                period="2020 - Present" 
+                image="http://static.photos/technology/640x360/1"
+                achievements='["Led cross-functional teams to launch 3 new products with 120% revenue growth","Optimized development processes reducing time-to-market by 30%","Established customer feedback system improving product satisfaction by 45%"]'
+                flipped="false">
+            </experience-card>
+
+            <experience-card 
+                title="Digital Transformation Consultant" 
+                company="Global Solutions Ltd." 
+                period="2018 - 2020" 
+                image="http://static.photos/office/640x360/2"
+                achievements='["Designed digital strategies for 12 Fortune 500 clients","Implemented automation solutions saving $4M annually","Facilitated executive workshops on digital innovation"]'
+                flipped="true">
+            </experience-card>
+
+            <experience-card 
+                title="Software Development Lead" 
+                company="Mobile Tech Co." 
+                period="2016 - 2018" 
+                image="http://static.photos/technology/640x360/3"
+                achievements='["Built and managed team of 8 developers","Architected mobile platform serving 500K+ users","Improved app performance by 60%"]'
+                flipped="false">
+            </experience-card>
+
+            <experience-card 
+                title="Business Analyst" 
+                company="Financial Services Corp" 
+                period="2014 - 2016" 
+                image="http://static.photos/finance/640x360/4"
+                achievements='["Developed financial models predicting market trends with 85% accuracy","Streamlined reporting processes saving 20 hours per week","Identified cost-saving opportunities worth $1.2M"]'
+                flipped="true">
+            </experience-card>
+
+            <experience-card 
+                title="Marketing Specialist" 
+                company="Startup Ventures" 
+                period="2012 - 2014" 
+                image="http://static.photos/workspace/640x360/5"
+                achievements='["Created marketing campaigns increasing leads by 300%","Managed social media growing followers to 50K+","Organized 12 successful industry events"]'
+                flipped="false">
+            </experience-card>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Technical Skills</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Product Management</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Strategic Planning</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Data Analysis</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-xl font-semibold mb-4">Tools & Technologies</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="code"></i> JavaScript</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="database"></i> SQL</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="figma"></i> Figma</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="trello"></i> Jira</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="bar-chart-2"></i> Tableau</span>
+                    <span class="px-4 py-2 bg-gray-100 rounded-full flex items-center gap-2"><i data-feather="cloud"></i> AWS</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="users" class="text-blue-600"></i>
+                        <span>Leadership</span>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="message-square" class="text-blue-600"></i>
+                        <span>Communication</span>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="zap" class="text-blue-600"></i>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="clock" class="text-blue-600"></i>
+                        <span>Time Management</span>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="heart" class="text-blue-600"></i>
+                        <span>Empathy</span>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg flex items-center gap-3">
+                        <i data-feather="refresh-cw" class="text-blue-600"></i>
+                        <span>Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <portfolio-item 
+                    title="Financial Dashboard" 
+                    image="http://static.photos/finance/640x360/6"
+                    role="Lead Developer"
+                    tools="React, D3.js, Node.js"
+                    outcome="Reduced reporting time by 70% for financial analysts">
+                </portfolio-item>
+
+                <portfolio-item 
+                    title="E-commerce Platform" 
+                    image="http://static.photos/retail/640x360/7"
+                    role="Product Manager"
+                    tools="Shopify, Figma, Google Analytics"
+                    outcome="Increased conversion rate by 35% in 6 months">
+                </portfolio-item>
+
+                <portfolio-item 
+                    title="AI Chatbot" 
+                    image="http://static.photos/technology/640x360/8"
+                    role="Project Lead"
+                    tools="Python, TensorFlow, AWS"
+                    outcome="Automated 50% of customer service inquiries">
+                </portfolio-item>
+
+                <portfolio-item 
+                    title="Mobile Banking App" 
+                    image="http://static.photos/finance/640x360/9"
+                    role="UX Designer"
+                    tools="Figma, Sketch, Adobe XD"
+                    outcome="Improved user retention by 40%">
+                </portfolio-item>
+
+                <portfolio-item 
+                    title="Supply Chain Analytics" 
+                    image="http://static.photos/industry/640x360/10"
+                    role="Data Scientist"
+                    tools="Python, SQL, Tableau"
+                    outcome="Identified $2M in cost savings annually">
+                </portfolio-item>
+
+                <portfolio-item 
+                    title="HR Management System" 
+                    image="http://static.photos/office/640x360/11"
+                    role="Full Stack Developer"
+                    tools="JavaScript, Node.js, MongoDB"
+                    outcome="Reduced onboarding time by 60%">
+                </portfolio-item>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life Highlights Section -->
+    <section id="life" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Life & Travel Highlights</h2>
+            
+            <div class="relative">
+                <div class="flex overflow-x-auto pb-6 scrollbar-hide space-x-4">
+                    <div class="flex-none w-64 md:w-80 rounded-xl overflow-hidden shadow-md">
+                        <img src="http://static.photos/travel/640x360/12" alt="Japan" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Japan Cultural Exchange</h3>
+                            <p class="text-sm text-gray-600 mt-1">Learned the art of patience and attention to detail through traditional tea ceremonies.</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-64 md:w-80 rounded-xl overflow-hidden shadow-md">
+                        <img src="http://static.photos/travel/640x360/13" alt="Patagonia" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Patagonia Trek</h3>
+                            <p class="text-sm text-gray-600 mt-1">Discovered resilience while hiking through one of the most remote regions on Earth.</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-64 md:w-80 rounded-xl overflow-hidden shadow-md">
+                        <img src="http://static.photos/travel/640x360/14" alt="Morocco" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Morocco Bazaar</h3>
+                            <p class="text-sm text-gray-600 mt-1">Mastered negotiation skills in the vibrant markets of Marrakech.</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-64 md:w-80 rounded-xl overflow-hidden shadow-md">
+                        <img src="http://static.photos/travel/640x360/15" alt="Switzerland" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Swiss Alps Photography</h3>
+                            <p class="text-sm text-gray-600 mt-1">Developed an eye for beauty and composition capturing alpine landscapes.</p>
+                        </div>
+                    </div>
+                    <div class="flex-none w-64 md:w-80 rounded-xl overflow-hidden shadow-md">
+                        <img src="http://static.photos/travel/640x360/16" alt="Brazil" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold">Brazilian Carnival</h3>
+                            <p class="text-sm text-gray-600 mt-1">Experienced the power of community and celebration in Rio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-feather="mail"></i>
+                            <span>hello@danieldable.com</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="map-pin"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">Follow Me</h3>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/in/daniel-dable-482637311/" target="_blank" class="p-3 bg-blue-700 rounded-full hover:bg-blue-800 transition duration-300">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-blue-700 rounded-full hover:bg-blue-800 transition duration-300">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-blue-700 rounded-full hover:bg-blue-800 transition duration-300">
+                                <i data-feather="github"></i>
+                            </a>
+                            <a href="#" class="p-3 bg-blue-700 rounded-full hover:bg-blue-800 transition duration-300">
+                                <i data-feather="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-blue-700 bg-opacity-20 border border-blue-400 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-blue-700 bg-opacity-20 border border-blue-400 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-blue-700 bg-opacity-20 border border-blue-400 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                        </div>
+                        <button type="submit" class="px-8 py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-gray-100 transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2023 Daniel Dable. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#hero" class="text-gray-400 hover:text-white transition duration-300">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
 </html>
